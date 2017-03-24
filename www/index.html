@@ -7,8 +7,8 @@
         <link href="js/libs/jquery-mobile/jquery.mobile.structure.min.css" rel="stylesheet" type="text/css"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="js/libs/jquery-mobile/jquery.mobile.min.js" type="text/javascript"></script>
-        <script src="http://maps.google.com/maps/api/js?sensor=false"></script>
         <script src="cordova.js" type="test/javascript"></script>
+        <script src="js/index.js" type="text/javascript"></script>
         <title>Comune di San Salvo</title>
     </head>
     <body>
@@ -17,17 +17,18 @@
                 <h3><a href="#pannello">Menu</a></h3>
                 <ul data-role="listview">
                     <li><a href="#servizi">Servizi</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#galleria">Galleria</a></li>
                     <li><a href="#map-page">Contatti</a></li>
+                    <li><a href="#impostazioni">Impostazioni</a></li>
                 </ul>
             </div>
             <div data-role="header" data-position="fixed">
                 <a href="#pannello" class="ui-btn ui-btn-left ui-icon-bars ui-btn-icon-left">Menu</a>
                 <h1>COMUNE DI SAN SALVO</h1>
             </div>
-            <div data-role="main" class="ui-content" style="text-align: center">
-                <div style="text-align: center">
-                    <img src="img/comune-sansalvo.jpg" style="width: 100%"/></div>
+            <div data-role="main" class="ui-content" style="text-align: center; width:100%; padding:0;">
+                <div class="pippo" style="text-align: center">
+                    <img src="img/comune-sansalvo.jpg" style="width:100%;"/></div>
                     <p>
                     COSA SONO
                     </p>
@@ -55,46 +56,82 @@
                     E' importante che i dati vengano inseriti correttamente in quanto solo dopo una loro verifica da parte dell'ente 
                     verrà generata una password che verrà inviata all'utente permettendogli di accedere alla parte riservata del portale.
                     
+                    
             </div>
         </div>
+        <!-- Pagina Luoghi da Visitare -->
         <div data-role="page" id="servizi">
             <div data-role="panel" id="pannelloServizi">
                 <h3><a href="#home">Menu</a></h3>
                 <ul data-role="listview">
                     <li><a href="#servizi">Servizi</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#galleria">Galleria</a></li>
                     <li><a href="#map-page">Contatti</a></li>
                     <li><a href="#impostazioni">Impostazioni</a></li>
                 </ul>
             </div>
             <div data-role="header" data-position="fixed">
-                <a href="#pannelloServizi" class="ui-btn ui-btn-left ui-icon-bars ui-btn-icon-left">Menù</a>
-                <h1>Servizi</h1>
+            <!--<a href="#pannelloServizi" class="ui-btn ui-btn-left ui-icon-bars ui-btn-icon-left ui-btn-icon-notext">Menù</a>-->
+                <h1>Luoghi da Visitare</h1>
             </div>
             <div data-role="main" class="ui-content">
-                Il maestro!
-            </div>
-            <div data-role="footer" data-position="fixed" style="text-align: center">
-                <div data-role="controlgroup" data-type="horizontal">
-                    <a href="" class="ui-btn ui-btn-icon-left ui-icon-comment">Facebook</a>
-                    <a href="" class="ui-btn ui-btn-icon-left ui-icon-tag">Twitter</a>
-                    <a href="" class="ui-btn ui-btn-icon-left ui-icon-video">YouTube</a>
-                </div>
+                <h2 style="text-align: center">Luoghi da Visitare</h2>
+                <ol data-role="listview" >
+                    <li><a href="#chiesa">chiese</a></li>
+                    <li><a href="#cinema">cinema</a></li>
+                    <li><a href="#interesse">Punti di Interesse</a></li>
+                    <li><a href="#farmacie">Farmacie</a></li>
+                </ol>
             </div>
         </div>
-        <div data-role="page" id="portfolio">
-            <div data-role="panel" id="pannelloPortfolio">
+        <!--  Pagina Chiese da visitare -->
+
+        <div data-role="page"  id="chiesa">
+            <div data-role="panel" id="panellochiesa">
                 <h3><a href="#home">Menu</a></h3>
                 <ul data-role="listview">
                     <li><a href="#servizi">Servizi</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#galleria">Galleria</a></li>
+                    <li><a href="#map-page">Contatti</a></li>
+                    <li><a href="#impostazioni">Impostazioni</a></li>
+                </ul>
+            </div>
+            
+            
+            
+            <div data-role="header" id="head"  data-position="fixed">
+                <a href="#pannellochiesa" id="head" class="ui-btn ui-btn-left ui-icon-bars ui-btn-icon-left ui-btn-icon-notext">Menù</a>
+                <h1>Chiesa</h1>
+                <div>
+                </div>
+                <div data-role="main" class="ui-content">
+                    <div> 
+                        <ul id="listaChiese" data-role='listview'></ul> 
+                    </div>
+                        <ol data-role="listview">
+
+                        </ol>
+                </div>
+            </div>
+        </div>
+        <!-- Fine Pagina Chiese da visitare -->
+        
+        
+        
+        
+        <div data-role="page" id="galleria">
+            <div data-role="panel" id="pannelloGalleria">
+                <h3><a href="#home">Menu</a></h3>
+                <ul data-role="listview">
+                    <li><a href="#servizi">Servizi</a></li>
+                    <li><a href="#galleria">Galleria</a></li>
                     <li><a href="#map-page">Contatti</a></li>
                     <li><a href="#impostazioni">Impostazioni</a></li>
                 </ul>
             </div>
             <div data-role="header" data-position="fixed">
-                <a href="#pannelloPortfolio" class="ui-btn ui-btn-left ui-icon-bars ui-btn-icon-left">Menù</a>
-                <h1>Portfoglio</h1>
+                <a href="#pannelloGalleria" class="ui-btn ui-btn-left ui-icon-bars ui-btn-icon-left">Menù</a>
+                <h1>Galleria</h1>
             </div>
             <div data-role="main" class="ui-content">
                 Il maestro!
@@ -112,7 +149,7 @@
                 <h3><a href="#home">Menu</a></h3>
                 <ul data-role="listview">
                     <li><a href="#servizi">Servizi</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#galleria">Galleria</a></li>
                     <li><a href="#map-page">Contatti</a></li>
                     <li><a href="#impostazioni">Impostazioni</a></li>
                 </ul>
@@ -121,8 +158,8 @@
                 <a href="#pannelloContatti" class="ui-btn ui-btn-left ui-icon-bars ui-btn-icon-left">Menù</a>
                 <h1>Contatti</h1>
             </div>
-            <div role="main" class="ui-content" id="map-canvas" style="height:500px;">
-                                <!-- map loads here... -->
+            <div role="main" class="ui-content" id="map-canvas" style="margin:0; padding:0;">
+             <iframe src="https://www.google.com/maps/d/embed?mid=1w5yv4qmFoGc87oO9Udahn9QzCto" style="scrollwheel: false;"  width="100%" height="480"></iframe>                   <!-- map loads here... -->
             </div>
 
             <!--Form contatti  -->
@@ -162,7 +199,7 @@
                 <h3><a href="#home">Menu</a></h3>
                 <ul data-role="listview">
                     <li><a href="#servizi">Servizi</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#galleria">Galleria</a></li>
                     <li><a href="#map-page">Contatti</a></li>
                     <li><a href="#impostazioni">Impostazioni</a></li>
                 </ul>
