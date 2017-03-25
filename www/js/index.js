@@ -1,18 +1,18 @@
-//funzione mostra pagine Chiesa in modo dinamico
-
-    $("#chiesa").on("pageshow", function () {
+  $("#chiesa").on("pageshow", function () {
         $.ajax("https://san-salvo-13976.firebaseio.com/Chiese.json")
                 .done(function (data) {
-                    var lista = $("#listaChiesa");
+                    var lista = $("#listaChiese");
                     lista.empty();
                     $.map(data, function (riga, indice) {
-                        var idChiesa = 'chiesa-' + indice;
+                        var idChiesa = 'chiese-' + indice;
                         var paginaChiesa = '<div data-role="page"  id="' + idChiesa + '"   style="text-align:center;">';
                        
                         
                         paginaChiesa += '<div data-role="header" data-position="fixed" style="background-color:#2ad" >';
                         paginaChiesa += "<h1>Dettaglio</h1>";
                         paginaChiesa += "<a href='#' data-rel='back' data-icon='back' style='height:5px;'></a>";
+                      
+                         
                         paginaChiesa += '</div>';
                         paginaChiesa += '<div data-role="main" class="ui-content"  >';
                         paginaChiesa += '<div>';
@@ -20,6 +20,9 @@
                         paginaChiesa += '</div>';
                         paginaChiesa += '<img src="' + riga.foto + '" alt="" style="width:300px;">';
                         paginaChiesa += '<div style="text-align:center;">' + riga.descr + ' </div>';
+                        paginaChiesa += riga.nome + " ";                     
+                        paginaChiesa += riga.descr + " ";
+                        paginaChiesa += riga.foto + " ";
                         paginaChiesa += '</div>';
                         paginaChiesa += '<div data-role="footer" data-position="fixed" style="text-align: center;">';
                         paginaChiesa += '<div data-role="controlgroup" data-type="horizontal">';
@@ -38,3 +41,58 @@
                     alert("Errore!");
                 });
     });
+    
+
+
+
+    //funzione mostra pagine museo in modo dinamico
+
+    $("#museo").on("pageshow", function () {
+        $.ajax("https://visitare-cfca8.firebaseio.com/musei.json")
+                .done(function (data) {
+                    var db = "https://visitare-cfca8.firebaseio.com/musei/";
+                    var lista = $("#listaMusei");
+                    lista.empty();
+                    $.map(data, function (riga, indice) {
+                        var idMuseo = 'museo-' + indice;
+                        var paginaMuseo = '<div data-role="page"   id="' + idMuseo + '"   style="text-align:center;">';
+
+                        paginaMuseo += '<div data-role="header"  data-position="fixed" style="text-align:center;background-color:#2ad";>';
+                        paginaMuseo += '<h1>Dettaglio</h1>';
+                        paginaMuseo += '<a href="#"data-rel="back" id="bottone" data-icon="carat-l" style="height:5px;margin-top:5px;border-color:#2ad"></a>';
+                        paginaMuseo += '</div>';
+                        paginaMuseo += '<h1>' + riga.nome + '</h1>';
+
+                        paginaMuseo += '<div data-role="main" class="ui-content">';
+                        paginaMuseo += '<img src="' + riga.foto + '" alt="" style="width:100%;">';
+                        //preferiti
+                        paginaMuseo += '<a href="" data-id="' + indice + '" class="ui-btn ui-btn-icon-left ui-icon-star">Preferiti</a>';
+                        paginaMuseo += '<div style="text-align:center;">' + riga.descr + '>';
+//                        paginaMuseo += riga.nome + " ";
+//                        paginaMuseo += riga.descr + " ";
+//                        paginaMuseo += riga.foto + " ";
+                        paginaMuseo += '</div>';
+                        paginaMuseo += '<div data-role="footer" data-theme="b" data-position="fixed" style="text-align: center;">';
+                        
+                        paginaMuseo += '<a href="https://www.facebook.com/Comune-di-Pescara-803719146335447/" class="fa fa-facebook fa-2x ui-link ui-btn ui-corner-all" data-role="button" role="button"></a>';
+                        paginaMuseo += '<a href="https://www.instagram.com/explore/locations/237210044/comune-di-pescara/"  class="fa fa-instagram fa-2x ui-link ui-btn ui-corner-all" data-role="button" role="button"></a>';
+                        paginaMuseo += '<a href="https://twitter.com/pescaranews?lang=it" class="fa fa-twitter fa-2x ui-link ui-btn ui-corner-all" data-role="button" role="button"></a>';
+                        paginaMuseo += '</div></div>';
+                        paginaMuseo += '</div>';
+                        $('body').append(paginaMuseo);
+                        $("a[data-id='" + indice + "']").click(function () {
+                            window.preferito = db + indice + ".json";
+                            console.log("porca eva " + window.preferito)
+                            preferiti();
+                        });
+
+                        var puntoLista = '<a href="#' + idMuseo + '" class="ui-btn ui-btn-icon-right ui-icon-carat-r">' + riga.nome + '</a>';
+                        lista.append("<li>" + puntoLista + "</li>");
+                        
+                    });
+                })
+                .fail(function () {
+                    alert("Errore!");
+                });
+    });
+    //funzione  Fine pagine Museo in modo dinamico

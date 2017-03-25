@@ -71,23 +71,24 @@
                 </ul>
             </div>
             <div data-role="header" data-position="fixed">
-            <!--<a href="#pannelloServizi" class="ui-btn ui-btn-left ui-icon-bars ui-btn-icon-left ui-btn-icon-notext">Menù</a>-->
+            <a href="#pannelloServizi" class="ui-btn ui-btn-left ui-icon-bars ui-btn-icon-left ui-btn-icon-notext">Menù</a>
                 <h1>Luoghi da Visitare</h1>
             </div>
             <div data-role="main" class="ui-content">
-                <h2 style="text-align: center">Luoghi da Visitare</h2>
-                <ol data-role="listview" >
-                    <li><a href="#chiesa">chiese</a></li>
+                <h2 style="text-align: center;">Luoghi da Visitare</h2>
+                <ul data-role="listview" >
+                    <li><a href="#chiesa">Chiesa</a></li>
+                    <li><a href="#musei">Musei</a></li>
                     <li><a href="#cinema">cinema</a></li>
                     <li><a href="#interesse">Punti di Interesse</a></li>
                     <li><a href="#farmacie">Farmacie</a></li>
-                </ol>
+                </ul>
             </div>
         </div>
         <!--  Pagina Chiese da visitare -->
 
-        <div data-role="page"  id="chiesa">
-            <div data-role="panel" id="panellochiesa">
+        <div data-role="page"  id="chiese">
+            <div data-role="panel" id="panellochiese">
                 <h3><a href="#home">Menu</a></h3>
                 <ul data-role="listview">
                     <li><a href="#servizi">Servizi</a></li>
@@ -96,17 +97,15 @@
                     <li><a href="#impostazioni">Impostazioni</a></li>
                 </ul>
             </div>
-            
-            
-            
+          
             <div data-role="header" id="head"  data-position="fixed">
-                <a href="#pannellochiesa" id="head" class="ui-btn ui-btn-left ui-icon-bars ui-btn-icon-left ui-btn-icon-notext">Menù</a>
+                <a href="#" data-rel="back" class="ui-btn ui-btn-left ui-btn-icon-left ui-icon-back">indietro</a>
                 <h1>Chiesa</h1>
                 <div>
                 </div>
                 <div data-role="main" class="ui-content">
                     <div> 
-                        <ul id="listaChiese" data-role='listview'></ul> 
+                        <ul id="listaChiesa" data-role='listview'></ul> 
                     </div>
                         <ol data-role="listview">
 
@@ -115,6 +114,46 @@
             </div>
         </div>
         <!-- Fine Pagina Chiese da visitare -->
+        
+        
+        <!--  Pagina Musei da visitare -->
+
+
+
+        <div data-role="page"    id="museo">
+            <div data-role="panel"  style="text-align: center;" id="pannellomuseo">
+                <img src="img/Ponte_delmare.png" alt=""/>
+                <h3>Musei</h3>
+                <ul data-role="listview">
+                    <li><a href="#chiesa">Chiesa</a></li>
+                    <li><a href="#musei">Musei</a></li>
+                    <li><a href="#cinema">cinema</a></li>
+                    <li><a href="#interesse">Punti di Interesse</a></li>
+                    <li><a href="#farmacie">Farmacie</a></li>
+           
+                </ul>
+            </div>
+            <div data-role="header"  id="head" data-position="fixed">
+                <a href="#pannellomuseo"  id="head" class="ui-btn ui-btn-left ui-icon-bars ui-btn-icon-left ui-btn-icon-notext">Menù</a>
+                <h1>Musei</h1>
+
+
+                <div>
+                   
+
+                </div>
+                <div  data-role="main" data-theme="b" class="ui-content">                
+                    <ul  id="listaMusei" class="ui-listview" data-role='listview'></ul>
+                </div>
+                <div data-role="footer" data-theme="b" data-position="fixed" style="text-align: center;">
+                   <a href="https://www.facebook.com/Comune-di-Pescara-803719146335447/" class="fa fa-facebook fa-2x ui-link ui-btn ui-corner-all" data-role="button" role="button"></a>
+                <a href="https://www.instagram.com/explore/locations/237210044/comune-di-pescara/"  class="fa fa-instagram fa-2x ui-link ui-btn ui-corner-all" data-role="button" role="button"></a>
+                <a href="https://twitter.com/pescaranews?lang=it" class="fa fa-twitter fa-2x ui-link ui-btn ui-corner-all" data-role="button" role="button"></a>
+            
+                </div>
+            </div>
+        </div>
+        <!-- Fine Pagina Musei da visitare -->
         
         
         
