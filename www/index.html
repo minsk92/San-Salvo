@@ -1,6 +1,10 @@
 <!DOCTYPE html>
+
+
 <html>
     <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="js/libs/jquery-mobile/jquery.mobile.theme.min.css" rel="stylesheet" type="text/css"/>
         <script src="js/libs/jquery/jquery.min.js" type="text/javascript"></script>
         <link href="js/libs/jquery-mobile/jquery.mobile.icons.min.css" rel="stylesheet" type="text/css"/>
@@ -9,6 +13,7 @@
         <script src="js/libs/jquery-mobile/jquery.mobile.min.js" type="text/javascript"></script>
         <script src="cordova.js" type="test/javascript"></script>
         <script src="js/index.js" type="text/javascript"></script>
+        <link href="css/index.css" rel="stylesheet" type="text/css"/>
         <title>Comune di San Salvo</title>
     </head>
     <body>
@@ -26,7 +31,7 @@
                 <a href="#pannello" class="ui-btn ui-btn-left ui-icon-bars ui-btn-icon-left">Menu</a>
                 <h1>COMUNE DI SAN SALVO</h1>
             </div>
-            <div data-role="main" class="ui-content" style="text-align: center; width:100%; padding:0;">
+            <div data-role="main" class="ui-content" style="text-align: center; width:100%;">
                 <div class="pippo" style="text-align: center">
                     <img src="img/comune-sansalvo.jpg" style="width:100%;"/></div>
                     <p>
@@ -87,8 +92,8 @@
         </div>
         <!--  Pagina Chiese da visitare -->
 
-        <div data-role="page"  id="chiese">
-            <div data-role="panel" id="panellochiese">
+        <div data-role="page"  id="chiesa">
+            <div data-role="panel" id="panelloChiesa">
                 <h3><a href="#home">Menu</a></h3>
                 <ul data-role="listview">
                     <li><a href="#servizi">Servizi</a></li>
@@ -97,19 +102,12 @@
                     <li><a href="#impostazioni">Impostazioni</a></li>
                 </ul>
             </div>
-          
             <div data-role="header" id="head"  data-position="fixed">
                 <a href="#" data-rel="back" class="ui-btn ui-btn-left ui-btn-icon-left ui-icon-back">indietro</a>
                 <h1>Chiesa</h1>
-                <div>
-                </div>
-                <div data-role="main" class="ui-content">
-                    <div> 
-                        <ul id="listaChiesa" data-role='listview'></ul> 
-                    </div>
-                        <ol data-role="listview">
-
-                        </ol>
+                <div id="listaChiesa" data-role="main" class="ui-content">
+                    
+                        
                 </div>
             </div>
         </div>
@@ -122,7 +120,7 @@
 
         <div data-role="page"    id="museo">
             <div data-role="panel"  style="text-align: center;" id="pannellomuseo">
-                <img src="img/Ponte_delmare.png" alt=""/>
+                <img src="" alt=""/>
                 <h3>Musei</h3>
                 <ul data-role="listview">
                     <li><a href="#chiesa">Chiesa</a></li>
@@ -169,7 +167,7 @@
                 </ul>
             </div>
             <div data-role="header" data-position="fixed">
-                <a href="#pannelloGalleria" class="ui-btn ui-btn-left ui-icon-bars ui-btn-icon-left">Menù</a>
+                <a href="#pannelloGalleria" class="ui-btn ui-btn-left ui-icon-bars ui-btn-icon-left">Menu</a>
                 <h1>Galleria</h1>
             </div>
             <div data-role="main" class="ui-content">
@@ -194,7 +192,7 @@
                 </ul>
             </div>
             <div data-role="header" data-position="fixed">
-                <a href="#pannelloContatti" class="ui-btn ui-btn-left ui-icon-bars ui-btn-icon-left">Menù</a>
+                <a href="#pannelloContatti" class="ui-btn ui-btn-left ui-icon-bars ui-btn-icon-left">Menu</a>
                 <h1>Contatti</h1>
             </div>
             <div role="main" class="ui-content" id="map-canvas" style="margin:0; padding:0;">
@@ -244,7 +242,7 @@
                 </ul>
             </div>
             <div data-role="header" data-position="fixed">
-                <a href="#pannelloImpostazioni" class="ui-btn ui-btn-left ui-icon-bars ui-btn-icon-left">Menù</a>
+                <a href="#pannelloImpostazioni" class="ui-btn ui-btn-left ui-icon-bars ui-btn-icon-left">Menu</a>
                 <h1>Impostazioni</h1>
             </div>
             <div role="main" class="ui-content">
