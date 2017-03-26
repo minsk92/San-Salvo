@@ -85,3 +85,13 @@ h1 {
     animation:fade 3000ms infinite;
     -webkit-animation:fade 3000ms infinite;
 }
+.img-acc{
+    background-image: url("img/sansalvo.jpg");
+    background-size: cover;
+}
+
+.smartink {
+    -webkit-column-count: 3; /* Chrome, Safari, Opera */
+    -moz-column-count: 3; /* Firefox */
+    column-count: 3;
+}

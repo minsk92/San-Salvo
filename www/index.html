@@ -14,12 +14,12 @@
         <script src="cordova.js" type="test/javascript"></script>
         <script src="js/index.js" type="text/javascript"></script>
         <link href="css/index.css" rel="stylesheet" type="text/css"/>
-        <title>Comune di San Salvo</title>
+        <title>COMUNE DI SAN SALVO</title>
     </head>
     <body>
-        <div data-role="page" id="home">
-            <div data-role="panel" id="pannello">
-                <h3><a href="#pannello">Menu</a></h3>
+        <div data-role="page" id="home" data-tap-toggle='false'>
+            <div data-role="panel" id="pannello" class="img-acc">
+                <h2><a href="#pannello">Menù</a></h2>
                 <ul data-role="listview">
                     <li><a href="#servizi">Servizi</a></li>
                     <li><a href="#galleria">Galleria</a></li>
@@ -27,13 +27,13 @@
                     <li><a href="#impostazioni">Impostazioni</a></li>
                 </ul>
             </div>
-            <div data-role="header" data-position="fixed">
+            <div data-role="header" data-position="fixed" style="position: fixed;" data-tap-toggle='false'>
                 <a href="#pannello" class="ui-btn ui-btn-left ui-icon-bars ui-btn-icon-left">Menù</a>
                 
                 <h1>COMUNE DI SAN SALVO</h1>
                 
             </div>
-            <div data-role="main" class="ui-content" style="text-align: center; width:100%;">
+            <div data-role="main" class="ui-content" data-tap-toggle='false' style="text-align: center; width:100%;">
                 <div class="pippo" style="text-align: center">
                     <img src="img/comune-sansalvo.jpg" style="width:100%;"/></div>
                     <p>
@@ -62,14 +62,18 @@
                     che diverrà il codice di accesso ai servizi web.
                     E' importante che i dati vengano inseriti correttamente in quanto solo dopo una loro verifica da parte dell'ente 
                     verrà generata una password che verrà inviata all'utente permettendogli di accedere alla parte riservata del portale.
-                    
+                    <div class="smartink">
+                        
+                       
+                        
+                    </div>
                     
             </div>
         </div>
         <!-- Pagina Luoghi da Visitare -->
         <div data-role="page" id="servizi">
-            <div data-role="panel" id="pannelloServizi">
-                <h3><a href="#home">Menu</a></h3>
+            <div data-role="panel" id="pannelloServizi" >
+                <h2><a href="#home">Menù</a></h2>
                 <ul data-role="listview">
                     <li><a href="#servizi">Servizi</a></li>
                     <li><a href="#galleria">Galleria</a></li>
@@ -77,8 +81,8 @@
                     <li><a href="#impostazioni">Impostazioni</a></li>
                 </ul>
             </div>
-            <div data-role="header" data-position="fixed">
-            <a href="#pannelloServizi" class="ui-btn ui-btn-left ui-icon-bars ui-btn-icon-left ui-btn-icon-notext">Menù</a>
+            <div data-role="header" data-position="fixed" data-tap-toggle='false'>
+            <a href="#pannelloServizi" class="ui-btn ui-btn-left ui-icon-bars ui-btn-icon-left ui-btn-icon-notext ui-fixed-hidden">Menù</a>
                 <h1>Luoghi da Visitare</h1>
             </div>
             <div data-role="main" class="ui-content">
@@ -86,7 +90,7 @@
                 <ul data-role="listview" >
                     <li><a href="#chiesa">Chiesa</a></li>
                     <li><a href="#museo">Musei</a></li>
-                    <li><a href="#cinema">cinema</a></li>
+                    <li><a href="#cinema">Cinema</a></li>
                     <li><a href="#interesse">Punti di Interesse</a></li>
                     <li><a href="#farmacie">Farmacie</a></li>
                 </ul>
@@ -104,7 +108,7 @@
                     <li><a href="#impostazioni">Impostazioni</a></li>
                 </ul>
             </div>
-            <div data-role="header" id="head"  data-position="fixed">
+            <div data-role="header" id="head"  data-position="fixed" data-tap-toggle='false'>
                 <a href="#" data-rel="back" class="ui-btn ui-btn-left ui-btn-icon-left ui-icon-back">indietro</a>
                 <h1>Chiesa</h1>
                 <div id="listaChiesa" data-role="main" class="ui-content">
@@ -122,13 +126,13 @@
                 <ul data-role="listview">
                     <li><a href="#chiesa">Chiesa</a></li>
                     <li><a href="#museo">Musei</a></li>
-                    <li><a href="#cinema">cinema</a></li>
+                    <li><a href="#cinema">Cinema</a></li>
                     <li><a href="#interesse">Punti di Interesse</a></li>
                     <li><a href="#farmacie">Farmacie</a></li>
            
                 </ul>
             </div>
-            <div data-role="header"  id="head" data-position="fixed">
+            <div data-role="header"  id="head" data-position="fixed" data-tap-toggle='false'>
                 <a href="#pannellomuseo"  id="head" class="ui-btn ui-btn-left ui-icon-bars ui-btn-icon-left ui-btn-icon-notext">Menù</a>
                 <h1>Musei</h1>
                 
@@ -137,7 +141,7 @@
                 <div id="listaMuseo" data-role="main" class="ui-content">
                  
                 </div>
-            <!--
+                <!--
                 <div  data-role="main" data-theme="b" class="ui-content">                
                     <ul  id="listaMuseo" class="ui-listview" data-role='listview'></ul>
                 </div>-->
@@ -153,9 +157,9 @@
         
         
         
-        <div data-role="page" id="galleria">
-            <div data-role="panel" id="pannelloGalleria">
-                <h3><a href="#home">Menu</a></h3>
+        <div data-role="page" id="galleria" data-tap-toggle='false'>
+            <div data-role="panel" id="pannelloGalleria" >
+                <h2><a href="#home">Menu</a></h2>
                 <ul data-role="listview">
                     <li><a href="#servizi">Servizi</a></li>
                     <li><a href="#galleria">Galleria</a></li>
@@ -163,7 +167,7 @@
                     <li><a href="#impostazioni">Impostazioni</a></li>
                 </ul>
             </div>
-            <div data-role="header" data-position="fixed">
+            <div data-role="header" data-position="fixed" data-tap-toggle='false'>
                 <a href="#pannelloGalleria" class="ui-btn ui-btn-left ui-icon-bars ui-btn-icon-left">Menù</a>
                 <h1>Galleria</h1>
             </div>
@@ -171,7 +175,7 @@
             
                 
             </div>
-            <div data-role="footer" data-position="fixed" style="text-align: center">
+            <div data-role="footer" data-position="fixed" data-tap-toggle='false' style="text-align: center">
                 <div data-role="controlgroup" data-type="horizontal">
                     <a href="" class="ui-btn ui-btn-icon-left ui-icon-comment">Facebook</a>
                     <a href="" class="ui-btn ui-btn-icon-left ui-icon-tag">Twitter</a>
@@ -189,11 +193,11 @@
                     <li><a href="#impostazioni">Impostazioni</a></li>
                 </ul>
             </div>
-            <div data-role="header" data-position="fixed">
+            <div data-role="header" data-position="fixed" data-tap-toggle='false'>
                 <a href="#pannelloContatti" class="ui-btn ui-btn-left ui-icon-bars ui-btn-icon-left">Menù</a>
                 <h1>Contatti</h1>
             </div>
-            <div role="main" class="ui-content" id="map-canvas" style="margin:0; padding:0;">
+            <div role="main" class="ui-content" id="map-canvas" style="margin:0;">
              <iframe src="https://www.google.com/maps/d/embed?mid=1w5yv4qmFoGc87oO9Udahn9QzCto" style="scrollwheel: false;"  width="100%" height="480"></iframe>                   <!-- map loads here... -->
             </div>
 
@@ -231,7 +235,7 @@
         </div>
         <div data-role="page" id="impostazioni">
             <div data-role="panel" id="pannelloImpostazioni">
-                <h3><a href="#home">Menu</a></h3>
+                <h2><a href="#home">Menu</a></h2>
                 <ul data-role="listview">
                     <li><a href="#servizi">Servizi</a></li>
                     <li><a href="#galleria">Galleria</a></li>
@@ -239,7 +243,7 @@
                     <li><a href="#impostazioni">Impostazioni</a></li>
                 </ul>
             </div>
-            <div data-role="header" data-position="fixed">
+            <div data-role="header" data-position="fixed" data-tap-toggle='false'>
                 <a href="#pannelloImpostazioni" class="ui-btn ui-btn-left ui-icon-bars ui-btn-icon-left">Menu</a>
                 <h1>Impostazioni</h1>
             </div>

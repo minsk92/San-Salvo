@@ -19,9 +19,9 @@
                         paginaChiesa += '</div>';
                         paginaChiesa += '<img src="' + riga.foto + '" alt="" style="width:300px;">';
                         paginaChiesa += '<div style="text-align:center;">' + riga.descr + ' </div>';
-                        paginaChiesa += riga.nome + " ";                     
-                        paginaChiesa += riga.descr + " ";
-                        paginaChiesa += riga.foto + " ";
+                        //paginaChiesa += riga.nome + " ";                     
+                        //paginaChiesa += riga.descr + " ";
+                        // paginaChiesa += riga.foto + " ";
                         paginaChiesa += '</div>';
                         paginaChiesa += '<div data-role="footer" data-position="fixed" style="text-align: center;">';
                         paginaChiesa += '<div data-role="controlgroup" data-type="horizontal">';
@@ -67,9 +67,6 @@ $(function (){
                         //preferiti
                         paginaMuseo += '<a href="" data-id="' + indice + '" class="ui-btn ui-btn-icon-left ui-icon-star">Preferiti</a>';
                         paginaMuseo += '<div style="text-align:center;">' + riga.descr + '>';
-//                        paginaMuseo += riga.nome + " ";
-//                        paginaMuseo += riga.descr + " ";
-//                        paginaMuseo += riga.foto + " ";
                         paginaMuseo += '</div>';
                         paginaMuseo += '<div data-role="footer" data-theme="b" data-position="fixed" style="text-align: center;">';
                         
