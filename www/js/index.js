@@ -45,11 +45,11 @@
 
 
     //funzione mostra pagine museo in modo dinamico
-
+$(function (){
     $("#museo").on("pageshow", function () {
         $.ajax("https://visitare-cfca8.firebaseio.com/musei.json")
                 .done(function (data) {
-                    var db = "https://visitare-cfca8.firebaseio.com/musei/";
+                    
                     var lista = $("#listaMusei");
                     lista.empty();
                     $.map(data, function (riga, indice) {
@@ -93,7 +93,29 @@
                 .fail(function () {
                     alert("Errore!");
                 });
-    });
-    //funzione  Fine pagine Museo in modo dinamico
+    });  });
 
- 
+$(function (){
+    $("#galleria").on("pageshow", function () {
+        $.ajax("https://san-salvo-13976.firebaseio.com/galleria.json")
+                .done(function (data) {
+                    
+                    var lista = $("#listaGalleria");
+                    lista.empty();
+                    $.map(data, function (riga, indice) {
+                        var idGalleria = 'galleria-'+ indice;
+                        var 
+                        paginaGalleria = '<div data-role="main" class="ui-content">';
+                        paginaGalleria += '<img src="'+ riga.test +'" alt="" style="width:100%;">';
+                        paginaGalleria += '<img src="'+ riga.sansalvo +'" alt="" style="width:100%;">';
+                        paginaGalleria += '<img src="'+ riga.piazza +'" alt="" style="width:100%;">';
+                        paginaGalleria += '<img src="'+ riga.mare +'" alt="" style="width:100%;">';
+                        paginaGalleria += '</div>';
+                        $('#listaGalleria').append(paginaGalleria);
+                        
+                    });
+                })
+                .fail(function () {
+                    alert("Errore!");
+                });
+    });  });

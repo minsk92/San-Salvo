@@ -28,7 +28,7 @@
                 </ul>
             </div>
             <div data-role="header" data-position="fixed">
-                <a href="#pannello" class="ui-btn ui-btn-left ui-icon-bars ui-btn-icon-left">Menu</a>
+                <a href="#pannello" class="ui-btn ui-btn-left ui-icon-bars ui-btn-icon-left">Menù</a>
                 <img src="#"/>
                 <h1>COMUNE DI SAN SALVO</h1>
                 
@@ -85,7 +85,7 @@
                 <h2 style="text-align: center;">Luoghi da Visitare</h2>
                 <ul data-role="listview" >
                     <li><a href="#chiesa">Chiesa</a></li>
-                    <li><a href="#musei">Musei</a></li>
+                    <li><a href="#museo">Musei</a></li>
                     <li><a href="#cinema">cinema</a></li>
                     <li><a href="#interesse">Punti di Interesse</a></li>
                     <li><a href="#farmacie">Farmacie</a></li>
@@ -108,8 +108,7 @@
                 <a href="#" data-rel="back" class="ui-btn ui-btn-left ui-btn-icon-left ui-icon-back">indietro</a>
                 <h1>Chiesa</h1>
                 <div id="listaChiesa" data-role="main" class="ui-content">
-                <button class="show-page-loading-msg" data-textonly="false" data-textvisible="true" data-msgtext="" data-inline="true">Icon + text</button>    
-                        
+                  
                 </div>
             </div>
         </div>
@@ -117,12 +116,12 @@
         
         <!--  Pagina Musei da visitare -->
 
-        <div data-role="page"    id="museo">
+        <div data-role="page" id="museo">
             <div data-role="panel"  style="text-align: center;" id="pannellomuseo">
                 <h3>Musei</h3>
                 <ul data-role="listview">
                     <li><a href="#chiesa">Chiesa</a></li>
-                    <li><a href="#musei">Musei</a></li>
+                    <li><a href="#museo">Musei</a></li>
                     <li><a href="#cinema">cinema</a></li>
                     <li><a href="#interesse">Punti di Interesse</a></li>
                     <li><a href="#farmacie">Farmacie</a></li>
@@ -132,20 +131,20 @@
             <div data-role="header"  id="head" data-position="fixed">
                 <a href="#pannellomuseo"  id="head" class="ui-btn ui-btn-left ui-icon-bars ui-btn-icon-left ui-btn-icon-notext">Menù</a>
                 <h1>Musei</h1>
-
-
-                <div>
-                   
-
+                
+                <a href="#" data-rel="back" class="ui-btn ui-btn-left ui-btn-icon-left ui-icon-back">indietro</a>
+                
+                <div id="listaMuseo" data-role="main" class="ui-content">
+                 
                 </div>
+            <!--
                 <div  data-role="main" data-theme="b" class="ui-content">                
-                    <ul  id="listaMusei" class="ui-listview" data-role='listview'></ul>
-                </div>
+                    <ul  id="listaMuseo" class="ui-listview" data-role='listview'></ul>
+                </div>-->
                 <div data-role="footer" data-theme="b" data-position="fixed" style="text-align: center;">
-                   <a href="https://www.facebook.com/Comune-di-Pescara-803719146335447/" class="fa fa-facebook fa-2x ui-link ui-btn ui-corner-all" data-role="button" role="button"></a>
-                <a href="https://www.instagram.com/explore/locations/237210044/comune-di-pescara/"  class="fa fa-instagram fa-2x ui-link ui-btn ui-corner-all" data-role="button" role="button"></a>
-                <a href="https://twitter.com/pescaranews?lang=it" class="fa fa-twitter fa-2x ui-link ui-btn ui-corner-all" data-role="button" role="button"></a>
-            
+                <a href="https://www.facebook.com/" class="fa fa-facebook fa-2x ui-link ui-btn ui-corner-all" data-role="button" role="button"></a>
+                <a href="https://www.instagram.com/explore/locations/237210044/"  class="fa fa-instagram fa-2x ui-link ui-btn ui-corner-all" data-role="button" role="button"></a>
+                            
                 </div>
             </div>
         </div>
@@ -165,11 +164,12 @@
                 </ul>
             </div>
             <div data-role="header" data-position="fixed">
-                <a href="#pannelloGalleria" class="ui-btn ui-btn-left ui-icon-bars ui-btn-icon-left">Menu</a>
+                <a href="#pannelloGalleria" class="ui-btn ui-btn-left ui-icon-bars ui-btn-icon-left">Menù</a>
                 <h1>Galleria</h1>
             </div>
-            <div data-role="main" class="ui-content">
-                Il maestro!
+            <div id="listaGalleria" data-role="main" class="ui-content">
+            
+                
             </div>
             <div data-role="footer" data-position="fixed" style="text-align: center">
                 <div data-role="controlgroup" data-type="horizontal">
@@ -190,7 +190,7 @@
                 </ul>
             </div>
             <div data-role="header" data-position="fixed">
-                <a href="#pannelloContatti" class="ui-btn ui-btn-left ui-icon-bars ui-btn-icon-left">Menu</a>
+                <a href="#pannelloContatti" class="ui-btn ui-btn-left ui-icon-bars ui-btn-icon-left">Menù</a>
                 <h1>Contatti</h1>
             </div>
             <div role="main" class="ui-content" id="map-canvas" style="margin:0; padding:0;">
