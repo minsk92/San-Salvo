@@ -47,7 +47,7 @@
     //funzione mostra pagine museo in modo dinamico
 $(function (){
     $("#museo").on("pageshow", function () {
-        $.ajax("https://visitare-cfca8.firebaseio.com/musei.json")
+        $.ajax("https://san-salvo-13976.firebaseio.com/Musei.json")
                 .done(function (data) {
                     
                     var lista = $("#listaMusei");
@@ -61,10 +61,10 @@ $(function (){
                         paginaMuseo += '<a href="#"data-rel="back" id="bottone" data-icon="carat-l" style="height:5px;margin-top:5px;border-color:#2ad"></a>';
                         paginaMuseo += '</div>';
                         paginaMuseo += '<h1>' + riga.nome + '</h1>';
-
+                        
                         paginaMuseo += '<div data-role="main" class="ui-content">';
                         paginaMuseo += '<img src="' + riga.foto + '" alt="" style="width:100%;">';
-                        //preferiti
+                        
                         paginaMuseo += '<a href="" data-id="' + indice + '" class="ui-btn ui-btn-icon-left ui-icon-star">Preferiti</a>';
                         paginaMuseo += '<div style="text-align:center;">' + riga.descr + '>';
                         paginaMuseo += '</div>';
@@ -116,3 +116,49 @@ $(function (){
                     alert("Errore!");
                 });
     });  });
+
+
+function salvaImpostazioni() {
+    var arrayPref = JSON.parse(window.localStorage.getItem("preferiti"));
+    console.log("array", arrayPref);
+    if (arrayPref === null) {
+        arrayPref = [];
+    }
+    var idPreferito = window.like;
+    var posPreferito = $.inArray(idPreferito, arrayPref);
+    if (posPreferito !== -1) {   // Se l'elemento non c'è, la funzione restituisce -1
+        arrayPref.splice(posPreferito, 1);
+        $(".icona-preferito").css("border-radius", 30);
+        $(".icona-preferito").css("background-color", "white");
+    } else {
+        $(".icona-preferito").css("background-color", "#ff5954");
+        $(".icona-preferito").css("border-radius", 30);
+        arrayPref.push(idPreferito);
+    }
+    console.log("id", idPreferito);
+    window.localStorage.setItem("preferiti", JSON.stringify(arrayPref));
+    if (idPreferito === arrayPref[0]) {
+        $(".icona-preferito").css("background-color", "white");
+    }
+}
+function cancellaPreferiti() {
+    var arrayPref = JSON.parse(window.localStorage.getItem("preferiti"));
+    console.log(arrayPref);
+    if (arrayPref === null) {
+        arrayPref = [];
+    }
+    var idPreferito = window.like;
+
+    var posPreferito = $.inArray(idPreferito, arrayPref);
+    if (posPreferito != -1) {   // Se l'elemento non c'è, la funzione restituisce -1
+        arrayPref.splice(posPreferito, 1);
+        $(".icona-preferito").css("border-radius", 30);
+        $(".icona-preferito").css("background-color", "#fff");
+    } else {
+        $(".icona-preferito").css("background-color", "white");
+        $(".icona-preferito").css("border-radius", 30);
+        arrayPref.push(idPreferito);
+    }
+    window.localStorage.setItem("preferiti", JSON.stringify(arrayPref));
+
+}
