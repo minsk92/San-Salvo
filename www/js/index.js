@@ -19,9 +19,7 @@
                         paginaChiesa += '</div>';
                         paginaChiesa += '<img src="' + riga.foto + '" alt="" style="width:300px;">';
                         paginaChiesa += '<div style="text-align:center;">' + riga.descr + ' </div>';
-                        //paginaChiesa += riga.nome + " ";                     
-                        //paginaChiesa += riga.descr + " ";
-                        // paginaChiesa += riga.foto + " ";
+                        
                         paginaChiesa += '</div>';
                         paginaChiesa += '<div data-role="footer" data-position="fixed" style="text-align: center;">';
                         paginaChiesa += '<div data-role="controlgroup" data-type="horizontal">';
